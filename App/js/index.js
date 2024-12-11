@@ -12,26 +12,26 @@ xui.Class('App', 'xui.Module',{
                 xui.create("xui.APICaller")
                 .setHost(host,"api_list")
                 .setQueryURL("{xui.constant.request_url}")
-                .setProxyType("auto")
                 .setQueryArgs({
                     "key" : "orders",
                     "paras" : {
                         "action" : "list"
                     }
                 })
+                .setProxyType("auto")
             );
             
             append(
                 xui.create("xui.APICaller")
                 .setHost(host,"api_del")
                 .setQueryURL("{xui.constant.request_url")
-                .setProxyType("auto")
                 .setQueryArgs({
                     "key" : "orders",
                     "paras" : {
                         "action" : "delete"
                     }
                 })
+                .setProxyType("auto")
             );
             
             append(
@@ -230,33 +230,6 @@ xui.Class('App', 'xui.Module',{
                 .setSrc("{/}img/setup.png")
             );
             
-            host.ctl_panel11.append(
-                xui.create("xui.UI.Link")
-                .setHost(host,"ctl_link1")
-                .setLeft("2.7555555555555555em")
-                .setTop("33.31111111111111em")
-                .setWidth("12.444444444444445em")
-                .setHeight("1.7777777777777777em")
-                .setCaption("Download source code")
-                .onClick([
-                    {
-                        "desc" : "Action 1",
-                        "type" : "other",
-                        "target" : "url",
-                        "args" : [
-                            "http://www.crossui.com/download.html"
-                        ],
-                        "method" : "open--_blank",
-                        "event" : 1
-                    }
-                ])
-                .setCustomStyle({
-                    "KEY" : {
-                        "font-style" : "italic"
-                    }
-                })
-            );
-            
             append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"ctl_block3")
@@ -397,7 +370,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"ctl_slabel28")
                 .setLeft("3.2916666666666665em")
                 .setTop("0.7916666666666666em")
-                .setCaption("Manage Orders")
+                .setCaption("Lista przeworzących")
                 .setCustomStyle({
                     "KEY" : {
                         "font-size" : "18pt",
